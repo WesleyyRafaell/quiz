@@ -1,5 +1,7 @@
+import * as S from './styles'
+
 const Home = () => {
-	return <p>home</p>
+	return <S.Text>home</S.Text>
 }
 
 export default Home
