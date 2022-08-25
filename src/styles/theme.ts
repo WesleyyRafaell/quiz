@@ -16,14 +16,14 @@ export const theme = {
 		}
 	},
 	colors: {
-		primary: '#F231A5',
-		secondary: '#3CD3C1',
-		mainBg: '#06092B',
+		primary: '#f9c840',
+		secondary: '#ffd7ab',
+		green: '#9bd125',
 		lightBg: '#F2F2F2',
 		white: '#FAFAFA',
 		black: '#030517',
 		lightGray: '#EAEAEA',
 		gray: '#8F8F8F',
-		darkGray: '#2E2F42'
+		darkYellow: '#85691dd1'
 	}
 } as const

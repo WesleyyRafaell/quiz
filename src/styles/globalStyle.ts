@@ -54,6 +54,7 @@ const GlobalStyle: GlobalStyleComponent<
 	${({ theme }) => css`
 		html {
 			font-size: 62.5%;
+			background-color: ${theme.colors.secondary};
 		}
 
 		body {
