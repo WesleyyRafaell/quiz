@@ -1,12 +1,13 @@
 import * as S from './styles'
 
-type ButtonProps = {
+export type ButtonProps = {
+	fullWidth?: boolean
 	children: string
 }
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ children, fullWidth = false }: ButtonProps) => {
 	return (
-		<S.Button>
+		<S.Button fullWidth={fullWidth}>
 			<S.TextButton>{children}</S.TextButton>
 		</S.Button>
 	)

@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components'
+import { ButtonProps } from '.'
 
-export const Button = styled.button`
-	${({ theme }) => css`
+export const Button = styled.button<Pick<ButtonProps, 'fullWidth'>>`
+	${({ theme, fullWidth }) => css`
 		background-color: ${theme.colors.green};
 		box-shadow: 4.7px 3.8px 1px #78a31a;
-		width: 24.5rem;
+		width: ${fullWidth ? '100%' : '24.5rem'};
 		height: 3.7rem;
 		border: none;
 		border-radius: 10px;

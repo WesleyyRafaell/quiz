@@ -31,7 +31,7 @@ const Home = () => {
 					<S.Text>Can you score 100% ?</S.Text>
 				</S.Main>
 				<S.Footer>
-					<Button>Comecar</Button>
+					<Button fullWidth>Comecar</Button>
 				</S.Footer>
 			</S.Box>
 		</Base>
