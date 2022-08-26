@@ -4,6 +4,7 @@ import animation from './lottieIcon.json'
 import Base from '../../templates/Base'
 
 import * as S from './styles'
+import Button from '../../components/Button'
 
 const Home = () => {
 	const defaultOptions = {
@@ -30,9 +31,7 @@ const Home = () => {
 					<S.Text>Can you score 100% ?</S.Text>
 				</S.Main>
 				<S.Footer>
-					<S.Button>
-						<S.TextButton>Comecar</S.TextButton>
-					</S.Button>
+					<Button>Comecar</Button>
 				</S.Footer>
 			</S.Box>
 		</Base>
