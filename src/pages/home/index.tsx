@@ -1,6 +1,9 @@
-import * as S from './styles'
 import Lottie from 'react-lottie'
+
 import animation from './lottieIcon.json'
+import Base from '../../templates/Base'
+
+import * as S from './styles'
 
 const Home = () => {
 	const defaultOptions = {
@@ -12,8 +15,8 @@ const Home = () => {
 		}
 	}
 	return (
-		<S.Container>
-			<S.Wrapper>
+		<Base>
+			<S.Box>
 				<S.Header>
 					<S.Title>
 						Welcome to the <span>Trivia Challenge!</span>
@@ -31,8 +34,8 @@ const Home = () => {
 						<S.TextButton>Comecar</S.TextButton>
 					</S.Button>
 				</S.Footer>
-			</S.Wrapper>
-		</S.Container>
+			</S.Box>
+		</Base>
 	)
 }
 
