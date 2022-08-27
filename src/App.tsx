@@ -5,7 +5,8 @@ import GlobalStyle from './styles/globalStyle'
 import { theme } from './styles/theme'
 
 //pages
-import Home from './pages/home'
+import Home from './pages/Home'
+import Quiz from './pages/Quiz'
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Router>
 				<Routes>
 					<Route index element={<Home />} />
+					<Route path="quiz" element={<Quiz />} />
 				</Routes>
 			</Router>
 		</ThemeProvider>

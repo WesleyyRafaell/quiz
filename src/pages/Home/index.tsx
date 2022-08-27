@@ -1,4 +1,5 @@
 import Lottie from 'react-lottie'
+import { Link } from 'react-router-dom'
 
 import animation from './lottieIcon.json'
 import Base from '../../templates/Base'
@@ -31,7 +32,9 @@ const Home = () => {
 					<S.Text>Can you score 100% ?</S.Text>
 				</S.Main>
 				<S.Footer>
-					<Button fullWidth>Comecar</Button>
+					<Link to="quiz">
+						<Button fullWidth>Comecar</Button>
+					</Link>
 				</S.Footer>
 			</S.Box>
 		</Base>

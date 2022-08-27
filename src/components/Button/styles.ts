@@ -1,15 +1,17 @@
 import styled, { css } from 'styled-components'
 import { ButtonProps } from '.'
 
-export const Button = styled.button<Pick<ButtonProps, 'fullWidth'>>`
-	${({ theme, fullWidth }) => css`
-		background-color: ${theme.colors.green};
-		box-shadow: 4.7px 3.8px 1px #78a31a;
-		width: ${fullWidth ? '100%' : '24.5rem'};
+// eslint-disable-next-line prettier/prettier
+export const Button = styled.button<Pick<ButtonProps, 'fullWidth' | 'backgroundRed'>>`
+	${({ theme, fullWidth, backgroundRed }) => css`
+		background-color: ${!backgroundRed ? theme.colors.green : theme.colors.red};
+		box-shadow: 4.7px 3.8px 1px
+			${!backgroundRed ? theme.colors.darGreen : theme.colors.darkRed};
+		width: ${fullWidth ? '100%' : '14.5rem'};
 		height: 3.7rem;
 		border: none;
 		border-radius: 10px;
-		transform: rotate(-0.4deg);
+		transform: rotate(-1.3deg);
 		cursor: pointer;
 
 		display: flex;

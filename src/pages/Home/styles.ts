@@ -36,11 +36,13 @@ export const Main = styled.div`
 `
 
 export const Footer = styled.div`
-	width: 100%;
+	width: 24.5rem;
+	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 
-	> button {
-		width: 24.5rem;
+	> a {
+		width: 100%;
+		text-decoration: none;
 	}
 `

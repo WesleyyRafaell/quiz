@@ -20,5 +20,6 @@ export const Container = styled.div`
 		border-top-left-radius: 20px;
 		border-top-right-radius: 20px;
 		box-shadow: 9.1px 8px 2.9px ${theme.colors.darkYellow};
+		overflow: hidden;
 	`}
 `

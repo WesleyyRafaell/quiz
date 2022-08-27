@@ -19,9 +19,11 @@ export const theme = {
 		primary: '#f9c840',
 		secondary: '#ffd7ab',
 		green: '#9bd125',
-		lightBg: '#F2F2F2',
+		darGreen: '#69852e',
+		red: '#e73c3c',
+		darkRed: '#bb3333',
+		black: '#222323',
 		white: '#FAFAFA',
-		black: '#030517',
 		lightGray: '#EAEAEA',
 		gray: '#8F8F8F',
 		darkYellow: '#85691dd1'
