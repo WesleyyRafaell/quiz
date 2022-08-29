@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Lottie from 'react-lottie'
 
 import api from '../../services/api'
@@ -8,6 +8,8 @@ import Button from '../../components/Button'
 import animation from './lottieicon.json'
 
 import * as S from './styles'
+import { AnswersContext } from '../../context/Answers'
+import { useNavigate } from 'react-router-dom'
 
 type dataProps = {
 	category: string
@@ -28,6 +30,9 @@ const defaultOptions = {
 }
 
 const Quiz = () => {
+	const navigate = useNavigate()
+	const { setScore } = useContext(AnswersContext)
+
 	const [loading, setLoading] = useState(true)
 	const [count, setCount] = useState(1)
 	const [arrayQuestions, setArryQuestions] = useState([])
@@ -38,6 +43,8 @@ const Quiz = () => {
 		question: ''
 	})
 
+	let isFirstRender = true
+
 	useEffect(() => {
 		const getData = async () => {
 			try {
@@ -46,6 +53,7 @@ const Quiz = () => {
 				)
 
 				if (!response) return
+				if (!isFirstRender) return
 
 				const formatedArrayQuestions = response.data.results.map(
 					(item: dataProps) => {
@@ -63,7 +71,8 @@ const Quiz = () => {
 				setQuestion(firstQuestion)
 				setArryQuestions(formatedArrayQuestions)
 				setLoading(false)
-				console.log(`teste`)
+				// eslint-disable-next-line react-hooks/exhaustive-deps
+				isFirstRender = false
 			} catch (error) {
 				console.log(`error`, error)
 			}
@@ -74,11 +83,11 @@ const Quiz = () => {
 
 	const handleUserAnswer = (answer: string) => {
 		if (answer === question.correct_answer) {
-			console.log(`acertou`)
+			setScore((prevState) => prevState + 1)
 		}
 
-		if (arrayQuestions.length === count) {
-			console.log(`parou`)
+		if (count === arrayQuestions.length) {
+			navigate('/result')
 			return
 		}
 
