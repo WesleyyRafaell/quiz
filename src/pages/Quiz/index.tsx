@@ -62,6 +62,8 @@ const Quiz = () => {
 							correct_answer: item.correct_answer,
 							difficulty: item.difficulty,
 							question: item.question
+								.replace(/&quot;/g, '"')
+								.replace(/&#039;/g, '`')
 						}
 					}
 				)

@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components'
+import { darken } from 'polished'
+
 import { ButtonProps } from '.'
 
 // eslint-disable-next-line prettier/prettier
@@ -17,6 +19,13 @@ export const Button = styled.button<Pick<ButtonProps, 'fullWidth' | 'backgroundR
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		&:hover {
+			background-color: ${darken(
+				0.1,
+				!backgroundRed ? theme.colors.green : theme.colors.red
+			)};
+		}
 	`}
 `
 export const TextButton = styled.p`
