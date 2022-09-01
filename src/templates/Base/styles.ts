@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
 	${({ theme }) => css`
@@ -21,5 +22,11 @@ export const Container = styled.div`
 		border-top-right-radius: 20px;
 		box-shadow: 9.1px 8px 2.9px ${theme.colors.darkYellow};
 		overflow: hidden;
+
+		${media.lessThan('small')`
+			height: 100%;
+			width: 100%;
+			border-radius: 0;
+		`}
 	`}
 `
